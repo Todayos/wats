@@ -51,7 +51,7 @@
     display: inline-block;
     text-align: center;
     position: relative;
-    left: 50%;
+    left: 55%;
     width: 30%;
     height: 30px;
     line-height: 40px;
@@ -99,7 +99,7 @@ a {
 .main {
     background: #f3f3f3;
     height: 300%;
-    width: 60%;
+    width: 50%;
     position: absolute;
     left: 20%;
 }
@@ -131,7 +131,7 @@ a {
 
 .wheel {
     position: relative;
-    height: 400px;
+    height: 350px;
     width: 100%;
     background-color: #333;
     top: 4%;
@@ -139,4 +139,59 @@ a {
     color: #fa2f2f;
     line-height: 400px;
     text-align: center;
+    margin-bottom: 11%;
+}
+
+.article p {
+    position: relative;
+    width: 98%;
+    background-color: #fff;
+    text-indent: 2em;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 1px;
+    padding: 1px 10px 1px 10px;
+}
+
+.login-box {
+    position: absolute;
+    display: inline-block;
+    width: 24%;
+    height: 60%;
+    background-color: #f3f3f3;
+    top: 12%;
+    left:72%;
+}
+.city{
+    position: absolute;
+    display: inline-block;
+    color: #444;
+    font-size: 14px;
+    font-weight: bolder;
+    top:10%;
+    left: 95%;
+}
+
+.location{
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    display: inline-block;
+    background-color: rgb(2, 130, 250);
+    text-align: center;
+    line-height: 30px;
+    color: #f3f3f3;
+    border-radius: 10%;
+    top:90%;
+    left:96%
+}
+
+
+.city::before{
+    content: "";
+    float: left;
+    background-image:url('../img/location1.ico') ;
+    background-size: 100% 100%;
+    width:25px;
+    height: 30px;
 }
