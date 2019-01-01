@@ -136,10 +136,17 @@ a {
     background-color: #333;
     top: 4%;
     box-shadow: 0px 1px 0px 1px #444;
-    color: #fa2f2f;
+    color: rgba(252, 62, 62, 0.8);
     line-height: 400px;
     text-align: center;
     margin-bottom: 11%;
+}
+
+.wheel ul li a img{
+    position: relative;
+    width: 50%;
+    height: 350px;
+    margin-top:-8px; 
 }
 
 .article p {
@@ -160,38 +167,58 @@ a {
     height: 60%;
     background-color: #f3f3f3;
     top: 12%;
-    left:72%;
+    left: 72%;
 }
-.city{
+
+.city {
+    background-color: rgba(243, 51, 26, 0.7);
     position: absolute;
-    display: inline-block;
+    display: none;
     color: #444;
     font-size: 14px;
     font-weight: bolder;
-    top:10%;
-    left: 95%;
+    top: 80%;
+    left: 92%;
+    width: 120px;
+    margin-top: 0.8%;
+    padding-left: 0.8%;
+    padding-bottom: 0.5%;
+    margin-left: 1%;
 }
 
-.location{
+.city li {
+    position: relative;
+    float: left;
+    width: 28%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.city :hover {
+    color: #f3f3f3;
+}
+
+.location {
     position: absolute;
-    width: 50px;
+    width: 70px;
     height: 30px;
-    display: inline-block;
+    display: none;
     background-color: rgb(2, 130, 250);
     text-align: center;
     line-height: 30px;
     color: #f3f3f3;
     border-radius: 10%;
-    top:90%;
-    left:96%
+    top: 90%;
+    left: 94%
 }
 
-
-.city::before{
-    content: "";
-    float: left;
-    background-image:url('../img/location1.ico') ;
+.location-img {
+    position: absolute;
+    top: 30%;
+    left: 95%;
+    display: inline-block;
+    background-image: url('../img/location1.ico');
     background-size: 100% 100%;
-    width:25px;
+    width: 25px;
     height: 30px;
 }
