@@ -22,3 +22,4 @@ locationImg[0].onclick = function () {
 
 
 //轮播图
+ var 
