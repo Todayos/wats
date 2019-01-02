@@ -124,6 +124,12 @@ a {
     font-weight: bolder;
 }
 
+.left-menu ul li a{
+    display: block;
+    height: inherit;
+    width: inherit;
+}
+
 .left-menu ul li:hover {
     background-color: #fa2f2f;
     border-radius: 5%;
