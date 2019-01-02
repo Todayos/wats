@@ -29,7 +29,7 @@
                     <a href="#">注册</a>
                 </li>
                 <li class='login'>
-                    <a href="#">登录</a>
+                    <a href="#">重置</a>
                 </li>
             </ul>
             <ul class='city'>
@@ -84,48 +84,59 @@
     <div class='main'>
         <div class="wheel">
             <ul>
-                <li>
-                    <a href="#" alt='轮播图1'>
-                        <img src="./img/timg.jpg" alt="">
-                    </a>
-                </li>
-                <!-- <li>
-                    <a href="#" alt='轮播图2'>
-                        <img src="./img/timg1.jpg" alt="">
-                    </a>
-                </li>
-                <li>
-                    <a href="#" alt='轮播图3'>
-                        <img src="./img/timg2.jpg" alt="">
-                    </a>
-                </li>
-                <li>
-                    <a href="#" alt='轮播图4'>
-                        <img src="./img/timg3.jpg" alt="">
-                    </a>
-                </li> -->
+                <li class='img2'><a href="#"><img src="./img/timg1.jpg" alt='轮播图1'></a></li>
+                <li class='img1'><a href="#"><img src="./img/timg.jpg" alt='轮播图2'></a></li>
             </ul>
+
         </div>
         <div class='article'>
             <p>
-                有这样一个故事。
-                有一位老奶奶，她有两个女儿，大女儿卖伞，小女儿卖帽子。
-                如果是晴天，老奶奶就担心大女儿家没生意。如果是雨天，她又担心小女儿家的帽子卖不出去。
-                为此，老奶奶活得郁郁寡欢。
-                邻居问她为什么看起来不高兴，得知原由后，邻居告诉她，你可以换个角度想，下雨天，大女儿的伞卖得又多又快；晴天，小女儿的店肯定很多人光顾。
-                老奶奶心结终于打开，不再整天愁容满面。
+                The sun has begun to set and I hang up the smile I’ve worn all day, though I will make sure it is the
+                first thing I put back on in the morning just in case it is “that day.” I want her to see me at my very
+                best.
             </p>
             <p>
-                有这样一个故事。
-                有一位老奶奶，她有两个女儿，大女儿卖伞，小女儿卖帽子。
-                如果是晴天，老奶奶就担心大女儿家没生意。如果是雨天，她又担心小女儿家的帽子卖不出去。
-                为此，老奶奶活得郁郁寡欢。
-                邻居问她为什么看起来不高兴，得知原由后，邻居告诉她，你可以换个角度想，下雨天，大女儿的伞卖得又多又快；晴天，小女儿的店肯定很多人光顾。
-                老奶奶心结终于打开，不再整天愁容满面。
+                What do you know about the sea? Some people know about it, but others don’t. The sea looks beautiful on
+                a fine sunny day, the sea is very big. In the world, there is more sea than land. Do you know Hainan
+                Island? It’s really very nice. We can see beaches, trees and the sea. We can swim and visit a lot of
+                beautiful places.
+            </p>
+            <p>
+                有一位表演大师上场前，他的弟子告诉他鞋带松了。
+                大师点头致谢，蹲下来仔细系好。等到弟子转身后，
+                又蹲下来将鞋带解松。有个旁观者不解地问：大师，
+                您为什么又要将鞋带解松呢？大师回答道：因为我
+                饰演的是一位劳累的旅行者，长途跋涉让他的鞋带
+                松开了。那你为什么不直接告诉你的弟子呢？他能
+                细心地发现我的鞋带松了，并且热心地告诉我，我
+                一定要保护他这种热情的积极性，及时地给他鼓励。
+                至于为什么要将鞋带解开，将来会有更多的机会教
+                他表演，可以下一次再说啊。
             </p>
         </div>
     </div>
     <div class='login-box'>
+        <div>
+            <span class='account-login' onclick="accountLoginFnc()">账户登录</span>
+            <span class='safe-login' onclick="safeLoginFnc()">&nbsp;安全登录</span>
+        </div>
+        <div class='account'>
+            <p id='username'>
+                <input type="text" name="username" placeholder="输入账号">
+            </p>
+            <p id='password'>
+                <input type="password" name="password" placeholder="输入密码">
+            </p>
+            <p>
+                <a id='submit' href="#">登 录</a>
+            </p>
+            <p>
+                <a class='forget' href="#">忘记密码？</a>
+            </p>
+        </div>
+        <div class='safe'>
+
+        </div>
     </div>
     <script src="./js/index.js"></script>
 </body>

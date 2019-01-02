@@ -135,18 +135,44 @@ a {
     width: 100%;
     background-color: #333;
     top: 4%;
-    box-shadow: 0px 1px 0px 1px #444;
     color: rgba(252, 62, 62, 0.8);
-    line-height: 400px;
-    text-align: center;
-    margin-bottom: 11%;
+    margin-bottom: 13%;
+    overflow: hidden;
 }
 
-.wheel ul li a img{
-    position: relative;
-    width: 50%;
-    height: 350px;
-    margin-top:-8px; 
+.wheel li {
+    text-decoration: none;
+    list-style: none;
+    margin-top: -20px;
+}
+
+.img1 {
+    animation: wheel-img2 10s;
+    position: absolute;
+    z-index: 2;
+}
+
+.img2 {
+    animation: wheel-img1 10s;
+    position: absolute;
+    z-index: 3;
+}
+
+@keyframes wheel-img1 {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+    100% {
+        left: 800px;
+        top: 0px;
+    }
+}
+
+.wheel ul li a img {
+    width: 700px;
+    height: inherit;
+    left: 300px;
 }
 
 .article p {
@@ -156,18 +182,122 @@ a {
     text-indent: 2em;
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
-    margin-bottom: 1px;
+    margin-bottom: 5px;
     padding: 1px 10px 1px 10px;
 }
 
 .login-box {
     position: absolute;
     display: inline-block;
-    width: 24%;
-    height: 60%;
+    width: 16%;
+    height: 40%;
     background-color: #f3f3f3;
     top: 12%;
     left: 72%;
+}
+
+.login-box input {
+    text-indent: 5px;
+    height: 25px;
+    width: 70%;
+    left: 30px;
+    margin-top: 20px;
+}
+
+.login-box span {
+    text-align: center;
+    float: left;
+    width: 44%;
+    margin-top: 20px;
+    margin-left: 6px;
+    color: #777;
+    font-weight: 600;
+}
+
+.safe-login {
+    border-left: 2px solid #777;
+}
+
+.account-login:hover {
+    color: #fa2f2f;
+}
+
+.safe-login:hover {
+    color: #fa2f2f;
+}
+
+.account {
+    margin-top: 50px;
+    display: block;
+}
+
+
+.account p {
+    float: left;
+    /* border: 1px solid #333; */
+    width: 100%;
+    height: 25px;
+    margin: 0 0 20px 0;
+}
+
+#submit {
+    float: left;
+    width: 70%;
+    height: 27px;
+    padding-top: 3px;
+    background-color: #777;
+    color: #fa2f2f;
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 35px;
+    font-weight: 700px;
+}
+
+.forget {
+    float: left;
+    color: #777;
+    margin-top: 20px;
+    font-size: 14px;
+    margin-left: 35px;
+    font-weight: 600px;
+}
+
+#username::before {
+    float: left;
+    content: "";
+    background-image: url('../img/login.ico');
+    background-size: 100% 100%;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+    margin-top: 22px;
+}
+
+#password::before {
+    float: left;
+    content: "";
+    background-image: url('../img/video.ico');
+    background-size: 100% 100%;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+    margin-top: 22px;
+}
+
+.safe {
+    position: relative;
+    background-image: url('../img/safe-login.jpg');
+    background-size: 100% 100%;
+    margin-top: 25%;
+    height: 80%;
+    width: 100%;
+    display: none;
 }
 
 .city {
@@ -178,7 +308,7 @@ a {
     font-size: 14px;
     font-weight: bolder;
     top: 80%;
-    left: 92%;
+    right: 0%;
     width: 120px;
     margin-top: 0.8%;
     padding-left: 0.8%;

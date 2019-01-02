@@ -12,14 +12,32 @@ locationImg[0].onmouseout = function () {
 locationImg[0].onclick = function () {
     document.getElementsByClassName('location')[0].style.display = 'none';
     if (document.getElementsByClassName('city')[0].style.display == 'none') {
-        console.log(document.getElementsByClassName('city')[0].style.display)
         document.getElementsByClassName('city')[0].style.display = 'block';
     } else {
         document.getElementsByClassName('city')[0].style.display = 'none';
-        console.log(document.getElementsByClassName('city')[0].style.display)
     }
 };
 
 
 //轮播图
- var 
+
+//给登录方式添加点击事件
+var accountLogin = document.getElementsByClassName('account-login');
+var safeLogin = document.getElementsByClassName('safe-login');
+function safeLoginFnc() {
+    if (document.getElementsByClassName('safe')[0].style.display == 'none' || document.getElementsByClassName('safe')[0].style.display == '') {
+        document.getElementsByClassName('account-login')[0].style.color = '#777';
+        document.getElementsByClassName('safe-login')[0].style.color = '#fa2f2f';
+        document.getElementsByClassName('account')[0].style.display = 'none';
+        document.getElementsByClassName('safe')[0].style.display = 'block';
+    }
+}
+
+function accountLoginFnc() {
+    if (document.getElementsByClassName('account')[0].style.display == 'none' || document.getElementsByClassName('safe')[0].style.display == '') {
+        document.getElementsByClassName('account-login')[0].style.color = '#fa2f2f';
+        document.getElementsByClassName('safe-login')[0].style.color = '#777';
+        document.getElementsByClassName('safe')[0].style.display = 'none';
+        document.getElementsByClassName('account')[0].style.display = 'block';
+    }
+}
