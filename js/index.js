@@ -11,15 +11,13 @@ locationImg[0].onmouseout = function () {
 };
 locationImg[0].onclick = function () {
     document.getElementsByClassName('location')[0].style.display = 'none';
-    if (document.getElementsByClassName('city')[0].style.display == 'none') {
+    if (document.getElementsByClassName('city')[0].style.display == 'none' || document.getElementsByClassName('city')[0].style.display == '') {
         document.getElementsByClassName('city')[0].style.display = 'block';
     } else {
         document.getElementsByClassName('city')[0].style.display = 'none';
     }
 };
 
-
-//轮播图
 
 //给登录方式添加点击事件
 var accountLogin = document.getElementsByClassName('account-login');
@@ -41,3 +39,5 @@ function accountLoginFnc() {
         document.getElementsByClassName('account')[0].style.display = 'block';
     }
 }
+
+//轮播图

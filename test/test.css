@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.wheel {
+    width: 500px;
+    height: 300px;
+    background-color: aqua;
+    /* 居中 */
+    margin: 200px auto;
+}
+
+.wheel ul {
+    list-style: none;
+}
+
+.wheel a img {
+    position: absolute;
+    width: 500px;
+    height: 300px;
+}
+
+.img2,
+.img3,
+.img4 {
+    display: none;
+}
+
+.btn {
+    position: relative;
+    left: 44%;
+    top: 90%;
+}
+/* 注意下面两个css设置，设计权重的问题 */
+.btn li {
+    display: inline-block;
+    background-color: #f3f3f3;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+/* 权重要比上面的 .btn li 高才能显示*/
+.btn .btn1 {
+    background-color: #e8f808;
+}

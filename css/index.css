@@ -124,7 +124,7 @@ a {
     font-weight: bolder;
 }
 
-.left-menu ul li a{
+.left-menu ul li a {
     display: block;
     height: inherit;
     width: inherit;
@@ -152,33 +152,32 @@ a {
     margin-top: -20px;
 }
 
-.img1 {
-    animation: wheel-img2 20s;
+/* .img1 {
+    animation: wheel-img1 20s;
     position: absolute;
     z-index: 2;
 }
 
 .img2 {
-    animation: wheel-img1 20s;
+    animation: wheel-img2 20s;
     position: absolute;
     z-index: 3;
 }
 
-@keyframes wheel-img1 {
+@keyframes wheel-img2 {
     0% {
         left: 0px;
         top: 0px;
     }
     100% {
-        left: 800px;
+        left: 1800px;
         top: 0px;
     }
-}
+} */
 
 .wheel ul li a img {
-    width: 700px;
-    height: inherit;
-    left: 300px;
+    float: left;
+    width: 100%;
 }
 
 .article p {
@@ -236,7 +235,6 @@ a {
     margin-top: 50px;
     display: block;
 }
-
 
 .account p {
     float: left;
@@ -359,7 +357,7 @@ a {
     height: 30px;
 }
 
-.school-list{
+.school-list {
     position: absolute;
     display: inline-block;
     background-color: #f3f3f3;
@@ -372,7 +370,7 @@ a {
     overflow: hidden;
 }
 
-.school-list ul li{
+.school-list ul li {
     display: inline-block;
     width: 48%;
     font-size: 14px;
@@ -380,25 +378,23 @@ a {
     line-height: 30px;
     /* 超出不换行，显示省略号 */
     overflow: hidden;
-    white-space:nowrap;
-    text-overflow:ellipsis;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
-.school-content{
+.school-content {
     text-align: center;
-    margin:10px 0 10px -5px;
+    margin: 10px 0 10px -5px;
     font-size: 16px;
     font-weight: 700;
     color: #444
 }
 
-.school-list ul li a{
+.school-list ul li a {
     text-decoration: none;
 }
 
-.school-list ul li a:hover{
+.school-list ul li a:hover {
     font-weight: 600;
-    color:#fa2f2f;
+    color: #fa2f2f;
 }
-
-
