@@ -153,13 +153,13 @@ a {
 }
 
 .img1 {
-    animation: wheel-img2 10s;
+    animation: wheel-img2 20s;
     position: absolute;
     z-index: 2;
 }
 
 .img2 {
-    animation: wheel-img1 10s;
+    animation: wheel-img1 20s;
     position: absolute;
     z-index: 3;
 }
