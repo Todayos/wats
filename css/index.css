@@ -8,7 +8,7 @@
     height: 50px;
     width: 100%;
     background-color: #b35454;
-    z-index: 1;
+    z-index: 999;
 }
 
 .top2 {
