@@ -82,14 +82,19 @@
         </ul>
     </div>
     <div class='main'>
-        <div class="wheel">
-            <ul>
-                <li class='img1'><a href="#"><img src="./img/timg1.jpg" alt='轮播图1'></a></li>
-                <li class='img2'><a href="#"><img src="./img/timg2.jpg" alt='轮播图2'></a></li>
-                <li class='img3'><a href="#"><img src="./img/timg3.jpg" alt='轮播图1'></a></li>
-                <li class='img4'><a href="#"><img src="./img/timg4.jpg" alt='轮播图2'></a></li>
+        <div class='wheel'>
+            <a href="#">
+                <img class='img1' style='display: block;' src="./img/timg1.jpg" alt="img1">
+            </a>
+            <a href="#"><img class='img2' src="./img/timg2.jpg" alt="img2"></a>
+            <a href="#"><img class='img3' src="./img/timg3.jpg" alt="img3"></a>
+            <a href="#"><img class='img4' src="./img/timg4.jpg" alt="img4"></a>
+            <ul class='btn'>
+                <li class='btn1' onclick="imgBtns('img1','btn1')"></li>
+                <li class='btn2' onclick="imgBtns('img2','btn2')"></li>
+                <li class='btn3' onclick="imgBtns('img3','btn3')"></li>
+                <li class='btn4' onclick="imgBtns('img4','btn4')"></li>
             </ul>
-
         </div>
         <div class='article'>
             <p>

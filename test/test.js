@@ -1,66 +1,33 @@
-var img1 = document.getElementsByClassName('img1');
-var img2 = document.getElementsByClassName('img2');
-var img3 = document.getElementsByClassName('img3');
-var img4 = document.getElementsByClassName('img4');
-var img4 = document.getElementsByClassName('wheel');
 
-function imgBtn1() {
-
-    if (document.getElementsByClassName('img1')[0].style.display == 'none' || document.getElementsByClassName('img1')[0].style.display == '') {
-        document.getElementsByClassName('img1')[0].style.display = 'block';
-        document.getElementsByClassName('img2')[0].style.display = 'none';
-        document.getElementsByClassName('img3')[0].style.display = 'none';
-        document.getElementsByClassName('img4')[0].style.display = 'none';
-        document.getElementsByClassName('btn1')[0].style.backgroundColor = '#e8f808';
-        document.getElementsByClassName('btn2')[0].style.backgroundColor = '#f3f3f3';
-        document.getElementsByClassName('btn3')[0].style.backgroundColor = '#f3f3f3';
-        document.getElementsByClassName('btn4')[0].style.backgroundColor = '#f3f3f3';
-    }
-}
-function imgBtn2() {
-    if (document.getElementsByClassName('img2')[0].style.display == 'none' || document.getElementsByClassName('img2')[0].style.display == '') {
-        document.getElementsByClassName('img1')[0].style.display = 'none';
-        document.getElementsByClassName('img2')[0].style.display = 'block';
-        document.getElementsByClassName('btn2')[0].style.backgroundColor = '#e8f808';
-        document.getElementsByClassName('img3')[0].style.display = 'none';
-        document.getElementsByClassName('img4')[0].style.display = 'none';
-        document.getElementsByClassName('btn1')[0].style.backgroundColor = '#f3f3f3';
-        document.getElementsByClassName('btn2')[0].style.backgroundColor = '#e8f808';
-        document.getElementsByClassName('btn3')[0].style.backgroundColor = '#f3f3f3';
-        document.getElementsByClassName('btn4')[0].style.backgroundColor = '#f3f3f3';
-    }
-}
-function imgBtn3() {
-    if (document.getElementsByClassName('img3')[0].style.display == 'none' || document.getElementsByClassName('img3')[0].style.display == '') {
-        document.getElementsByClassName('img1')[0].style.display = 'none';
-        document.getElementsByClassName('img2')[0].style.display = 'none';
-        document.getElementsByClassName('img3')[0].style.display = 'block';
-        document.getElementsByClassName('img4')[0].style.display = 'none';
-        document.getElementsByClassName('btn1')[0].style.backgroundColor = '#f3f3f3';
-        document.getElementsByClassName('btn2')[0].style.backgroundColor = '#f3f3f3';
-        document.getElementsByClassName('btn3')[0].style.backgroundColor = '#e8f808';
-        document.getElementsByClassName('btn4')[0].style.backgroundColor = '#f3f3f3';
-    }
-}
-function imgBtn4() {
-    if (document.getElementsByClassName('img4')[0].style.display == 'none' || document.getElementsByClassName('img4')[0].style.display == '') {
+//轮播图下方小圆圈按钮
+function imgBtns(imgClassName, btnClassName) {
+    if (document.getElementsByClassName(imgClassName)[0].style.display == 'none' || document.getElementsByClassName(imgClassName)[0].style.display == '') {
         document.getElementsByClassName('img1')[0].style.display = 'none';
         document.getElementsByClassName('img2')[0].style.display = 'none';
         document.getElementsByClassName('img3')[0].style.display = 'none';
-        document.getElementsByClassName('img4')[0].style.display = 'block';
+        document.getElementsByClassName('img4')[0].style.display = 'none';
         document.getElementsByClassName('btn1')[0].style.backgroundColor = '#f3f3f3';
         document.getElementsByClassName('btn2')[0].style.backgroundColor = '#f3f3f3';
         document.getElementsByClassName('btn3')[0].style.backgroundColor = '#f3f3f3';
-        document.getElementsByClassName('btn4')[0].style.backgroundColor = '#e8f808';
+        document.getElementsByClassName('btn4')[0].style.backgroundColor = '#f3f3f3';
+        document.getElementsByClassName(imgClassName)[0].style.display = 'block';
+        document.getElementsByClassName(btnClassName)[0].style.backgroundColor = '#e8f808';
     }
 }
 
-function hideImgs() {
-    // for(var -){
-
-    // }
+//轮播图定时变化
+var ctn = 1;
+//改变图片的显示状态
+function imgChange() {
+    var imgCtns = 'img' + ctn;
+    var btnCtns = 'btn' + ctn;
+    imgBtns(imgCtns, btnCtns);
+    console.log("当前展示" + ctn);
+    ctn++;
+    if (ctn == 5) {
+        ctn = 1;
+    }
 }
 
-var wheel = document.getElementsByClassName('wheel');
-// var imgs = wheel.getElementsByTagName('img');
-// console.log(imgs);
+//设置定时效果
+setInterval(imgChange, 4000);
