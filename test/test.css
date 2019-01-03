@@ -15,16 +15,11 @@
     list-style: none;
 }
 
-.wheel a img {
+.wheel img {
+    display: none;
     position: absolute;
     width: 500px;
     height: 300px;
-}
-
-.img2,
-.img3,
-.img4 {
-    display: none;
 }
 
 .btn {
@@ -32,17 +27,21 @@
     left: 44%;
     top: 90%;
 }
+
 /* 注意下面两个css设置，设计权重的问题 */
+
 .btn li {
     display: inline-block;
-    background-color: #f3f3f3;
+    background-color: #ddd;
     width: 12px;
     height: 12px;
     border-radius: 50%;
     margin-right: 8px;
+    list-style: none;
 }
 
 /* 权重要比上面的 .btn li 高才能显示*/
+
 .btn .btn1 {
     background-color: #e8f808;
 }
