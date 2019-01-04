@@ -1,44 +1,40 @@
 
-//位置选择
-var city = document.getElementsByClassName('city');
-var locationIs = document.getElementsByClassName('location');
-var locationImg = document.getElementsByClassName('location-img');
-locationImg[0].onmouseover = function () {
-    locationIs[0].style.display = 'block';
-};
-locationImg[0].onmouseout = function () {
-    locationIs[0].style.display = 'none';
-};
-locationImg[0].onclick = function () {
-    document.getElementsByClassName('location')[0].style.display = 'none';
-    if (document.getElementsByClassName('city')[0].style.display == 'none' || document.getElementsByClassName('city')[0].style.display == '') {
-        document.getElementsByClassName('city')[0].style.display = 'block';
+//当鼠标移入或移出位置图片时，设置当前位置提示信息
+$('.location-img').hover(function () {
+    $('.location').css('display', 'block');
+}, function () {
+    $('.location').css('display', 'none');
+})
+
+//设置地区选择菜单的点击事件
+$('.location-img').click(function () {
+    $(".location").css("display", 'none');
+    if ($('.city').css('display') == 'none' || $('.city').css('display') == '') {
+        $('.city').css('display', 'block');
     } else {
-        document.getElementsByClassName('city')[0].style.display = 'none';
+        $('.city').css('display', 'none');
     }
-};
+})
 
-
-//给登录方式添加点击事件
-var accountLogin = document.getElementsByClassName('account-login');
-var safeLogin = document.getElementsByClassName('safe-login');
-function safeLoginFnc() {
-    if (document.getElementsByClassName('safe')[0].style.display == 'none' || document.getElementsByClassName('safe')[0].style.display == '') {
-        document.getElementsByClassName('account-login')[0].style.color = '#777';
-        document.getElementsByClassName('safe-login')[0].style.color = '#fa2f2f';
-        document.getElementsByClassName('account')[0].style.display = 'none';
-        document.getElementsByClassName('safe')[0].style.display = 'block';
+//给安全登录方式添加点击事件
+$('.safe-login').click(function () {
+    if ($('.safe').css('display') == 'none' || $('.safe').css('display') == '') {
+        $('.account-login').css('color', '#777');
+        $('.safe-login').css('color', '#fa2f2f');
+        $('.account').css('display', 'none');
+        $('.safe').css('display', 'block');
     }
-}
+})
 
-function accountLoginFnc() {
-    if (document.getElementsByClassName('account')[0].style.display == 'none' || document.getElementsByClassName('safe')[0].style.display == '') {
-        document.getElementsByClassName('account-login')[0].style.color = '#fa2f2f';
-        document.getElementsByClassName('safe-login')[0].style.color = '#777';
-        document.getElementsByClassName('safe')[0].style.display = 'none';
-        document.getElementsByClassName('account')[0].style.display = 'block';
+//给账号登录添加点击事件
+$('.account-login').click(function () {
+    if ($('.account').css('display') == 'none' || $('.account').css('display') == '') {
+        $('.account-login').css('color', '#fa2f2f');
+        $('.safe-login').css('color', '#777');
+        $('.safe').css('display', 'none');
+        $('.account').css('display', 'block');
     }
-}
+})
 
 //轮播图----------------------------------------------------------------------------
 //控制显示的是哪个小圆点和哪张图片
@@ -65,7 +61,7 @@ $(".wheel").hover(function () {
     timer = setInterval(run, 2000);
 });
 
-$('wheel ul li').click()
+// $('wheel ul li').click()
 
 //移入下方的小圆圈显示对应的图片
 $(".wheel ul li").mouseenter(function () {
@@ -75,3 +71,24 @@ $(".wheel ul li").mouseenter(function () {
     $(".btn li").eq(ctn).css('backgroundColor', '#e8f808').siblings('li').css("backgroundColor", "#ddd");
 })
 //----------------------------------------------------------------------------
+
+//文章、视频发布时间
+Date.prototype.Format = function (fmt) { 
+    var o = {
+        "M+": this.getMonth() + 1,                   //月份   
+        "d+": this.getDate(),                        //日   
+        "h+": this.getHours(),                       //小时   
+        "m+": this.getMinutes(),                     //分   
+        "s+": this.getSeconds(),                     //秒   
+        "q+": Math.floor((this.getMonth() + 3) / 3), //季度   
+        "S": this.getMilliseconds()                  //毫秒   
+    };
+    if (/(y+)/.test(fmt))
+        fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+    for (var k in o)
+        if (new RegExp("(" + k + ")").test(fmt))
+            fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+    return fmt;
+}
+var date = new Date().Format("yyyy-MM-dd hh:mm:ss");
+$('.issue_date').html(date);
