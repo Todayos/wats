@@ -1,0 +1,170 @@
+/* 给两个正方体设置旋转动画 */
+
+@keyframes my3d {
+    0% {
+        transform: rotateX(0) rotateY(0) rotateZ(0)
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg)
+    }
+}
+
+.surface {
+    width: 180px;
+    height: 180px;
+    position: relative;
+    perspective-origin: 50% 50%;
+    transform-style: preserve-3d;
+    /* margin: 180px auto; */
+    margin-top:150px;
+    list-style: none;
+    animation-name: my3d;
+    animation-play-state: running;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+.surface li {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.7;
+    overflow: hidden;
+}
+
+.surface div {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    overflow: hidden;
+}
+
+/* 给里面的小正方体设置旋转 */
+
+.surface div:nth-last-child(6) {
+    transform: rotateX(0deg) translateZ(50px);
+    background-color: rgba(13, 228, 228, 0.8);
+}
+
+.surface div:nth-last-child(5) {
+    transform: rotateX(90deg) translateZ(-50px);
+    background-color: rgba(13, 228, 228, 0.8);
+}
+
+.surface div:nth-last-child(4) {
+    transform: rotateX(0deg) translateZ(-50px);
+    background-color: rgba(13, 228, 228, 0.8);
+}
+
+.surface div:nth-last-child(3) {
+    transform: rotateX(-90deg) translateZ(-50px);
+    background-color: rgba(13, 228, 228, 0.8);
+}
+
+.surface div:nth-last-child(2) {
+    transform: rotateY(90deg) translateZ(-50px);
+    background-color: rgba(13, 228, 228, 0.8);
+}
+
+.surface div:nth-last-child(1) {
+    transform: rotateY(90deg) translateZ(50px);
+    background-color: rgba(13, 228, 228, 0.8);
+}
+
+/* 给外面的大正方体设置旋转 */
+
+.surface li:first-child {
+    transform: rotateX(0deg) translateZ(100px);
+    background-color: rgba(13, 228, 228, 0.8);
+}
+
+.surface li:nth-child(2) {
+    transform: rotateX(90deg) translateZ(-100px);
+    background-color: rgba(13, 228, 228, 0.8);
+}
+
+.surface li:nth-child(3) {
+    transform: rotateX(0deg) translateZ(-100px);
+    background-color: rgba(13, 228, 228, 0.8);
+}
+
+.surface li:nth-child(4) {
+    transform: rotateX(-90deg) translateZ(-100px);
+    background-color: rgba(13, 228, 228, 0.8);
+}
+
+.surface li:nth-child(5) {
+    transform: rotateY(90deg) translateZ(-100px);
+    background-color: rgba(13, 228, 228, 0.8);
+}
+
+.surface li:nth-child(6) {
+    transform: rotateY(90deg) translateZ(100px);
+    background-color: rgba(13, 228, 228, 0.8);
+}
+
+/* 设置伪类hover鼠标碰触 */
+
+.surface:hover li:first-child {
+    transition: 2s linear;
+    transform: translateZ(180px);
+}
+
+.surface:hover li:nth-child(3) {
+    transition: 2s linear;
+    transform: translateZ(-180px);
+}
+
+.surface:hover li:nth-child(2) {
+    transition: 2s linear;
+    transform: rotateX(90deg) translateZ(-180px);
+}
+
+.surface:hover li:nth-child(4) {
+    transition: 2s linear;
+    transform: rotateX(-90deg) translateZ(-180px);
+}
+
+.surface:hover li:nth-child(5) {
+    transition: 2s linear;
+    transform: rotateY(90deg) translateZ(-180px);
+}
+
+.surface:hover li:nth-child(6) {
+    transition: 2s linear;
+    transform: rotateY(90deg) translateZ(180px);
+}
+
+.surface:hover div:nth-last-child(6) {
+    transition: 3s linear;
+    transform: translateZ(100px);
+}
+
+.surface:hover div:nth-last-child(4) {
+    transition: 3s linear;
+    transform: translateZ(-100px);
+}
+
+.surface:hover div:nth-last-child(5) {
+    transition: 3s linear;
+    transform: rotateX(90deg) translateZ(-100px);
+}
+
+.surface:hover div:nth-last-child(3) {
+    transition: 3s linear;
+    transform: rotateX(-90deg) translateZ(-100px);
+}
+
+.surface:hover div:nth-last-child(2) {
+    transition: 3s linear;
+    transform: rotateY(90deg) translateZ(-100px);
+}
+
+.surface:hover div:last-child {
+    transition: 3s linear;
+    transform: rotateY(90deg) translateZ(100px);
+}
