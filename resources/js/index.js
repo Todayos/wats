@@ -73,7 +73,7 @@ $(".wheel ul li").mouseenter(function () {
 //----------------------------------------------------------------------------
 
 //文章、视频发布时间
-Date.prototype.Format = function (fmt) { 
+Date.prototype.Format = function (fmt) {
     var o = {
         "M+": this.getMonth() + 1,                   //月份   
         "d+": this.getDate(),                        //日   
@@ -92,3 +92,28 @@ Date.prototype.Format = function (fmt) {
 }
 var date = new Date().Format("yyyy-MM-dd hh:mm:ss");
 $('.issue_date').html(date);
+
+
+//左边栏中的项目分类选项，默认选中 表白 类
+//获取当前li标签索引
+var li = $('.left-menu ul li');
+//是否进行了点击操作
+var isClick = false;
+li[3].style.backgroundColor = '#fa2f2f';
+li[3].style.borderRadius = '5%';
+//创建移入移出事件
+$('.left-menu ul li').hover(function () {
+    $(this).css('backgroundColor', '#fa2f2f').siblings('li').css('backgroundColor', '#fff');
+}, function () {
+    if (isClick == false) {
+        $(this).css('backgroundColor', '#fff');
+        li[3].style.backgroundColor = '#fa2f2f';
+    }
+})
+//创建点击事件
+$('.left-menu ul li').click(function () {
+    isClick = true;
+    $(this).css('backgroundColor', '#fa2f2f').siblings('li').css('backgroundColor', '#fff');
+    $(this).css('borderRadius', '5%');
+})
+
