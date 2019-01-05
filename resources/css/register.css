@@ -4,10 +4,12 @@
     box-sizing: border-box;
 }
 
-body {
+.index-body {
     height: 100vh;
     width: 100%;
     background-image: url("../img/index-bcg.png");
+    background-size: 100% 100%;
+    top:100px;
 }
 
 .top {
@@ -38,19 +40,19 @@ h1 {
 
 .God {
     position: relative;
-    top:50px;
+    top: 50px;
 }
 
 .God:hover {
-    color:rgb(251, 255, 0);
+    color: rgb(251, 255, 0);
     font-size: 66px;
 }
 
 .design {
-    color:#28404b;
+    color: #28404b;
     position: absolute;
     width: 60%;
-    top:10px;
+    top: 10px;
     left: 40%;
     font-size: 69px;
 }
@@ -65,12 +67,18 @@ h3 {
 }
 
 .cartoon {
-    position: relative;
+    position: absolute;
+    float: left;
+    top: 30%;
     width: 20%;
     left: 15%;
-    top: 150px;
-    height: 100px;
-    border: 1px solid #f3f3f3;
+    height: 50%;
+}
+
+.surface {
+    position: relative;
+    top: -20%;
+    ;
 }
 
 .register {
@@ -85,24 +93,34 @@ h3 {
     margin: 20px 0;
     color: #f3f3f3;
     width: 99%;
-    height: 50px;
+    height: 30px;
     padding: 5px 1px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .accunt_passWord {
     margin: 20px 0;
     color: #f3f3f3;
     width: 99%;
-    height: 50px;
+    height: 0px;
     padding: 5px 1px;
     /* border: 1px solid #fff; */
     margin-bottom: 50px;
 }
 
+.accunt_passWord1 {
+    margin: 20px 0;
+    color: #f3f3f3;
+    width: 99%;
+    height: 0px;
+    padding: 5px 1px;
+    margin-bottom: 50px;
+    margin-left: 32px;
+}
+
 input {
     display: block;
-    width: 80%;
+    width: 70%;
     left: 50%;
     height: 30px;
     padding-left: 10px;
@@ -138,11 +156,13 @@ input {
 .submit {
     background-color: rgba(13, 228, 228, 0.8);
     display: inline-block;
-    width: 80%;
+    width: 70%;
     text-decoration: none;
     text-align: center;
     font-size: 20px;
     line-height: 30px;
     height: 32px;
     color: #333;
+    margin-left: 32px;
+    margin-top: 20px;
 }
