@@ -55,6 +55,7 @@ h1 {
     top: 10px;
     left: 40%;
     font-size: 69px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 h3 {
@@ -162,7 +163,8 @@ input {
     font-size: 20px;
     line-height: 30px;
     height: 32px;
-    color: #333;
+    color: rgb(22, 50, 73);
     margin-left: 32px;
     margin-top: 20px;
+    font-weight: 600;
 }
