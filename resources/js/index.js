@@ -117,3 +117,29 @@ $('.left-menu ul li').click(function () {
     $(this).css('borderRadius', '5%');
 })
 
+// 下拉加载新内容--------------------------------------
+var article = $('.article');
+var newPara = $('.new_para');
+var pageBottom = $('.page_bottom');
+window.onload = function () {
+    article.onscroll = function () {
+        var x = scrollTop;
+        var y = scrollHeight;
+        var z = clientHeight;
+        if (x == y - z) {
+            pageBottom[0].css('display', 'block');
+            window.setTimeout('addNews()', 1000);
+        }
+    }
+}
+
+function addNews() {
+    var news = article[0].innerHTML + newPara[0].innerHTML;
+    article[0].innerHTML = news;
+    pageBottom[0].css('display', 'none');
+}
+
+
+
+// ---------------------------------------------------
+

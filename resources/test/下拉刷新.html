@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>下拉刷新</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px auto;
+        }
+
+        #out_div {
+            width: 400px;
+            height: 300px;
+            border: #F00 solid 2px;
+            overflow-y: scroll;
+        }
+
+        #bottom_div {
+            width: 100%;
+            height: 20px;
+            background: #09f;
+            color: #fff;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="out_div">
+           <div id="inner_div">
+            <p>zhangsan</p>
+            <p>zhangsan</p>
+            <p>zhangsan</p>
+            <p>zhangsan</p>
+            <p>zhangsan</p>
+            <p>zhangsan</p>
+            <p>zhangsan</p>
+            <p>zhangsan</p>
+            <p>zhangsan</p>
+            <p>zhangsan</p>
+            <p>zhangsan</p>
+            <p>zhangsan</p>
+            <p>zhangsan</p>
+            <p>zhangsan</p>
+            <p>zhangsan</p>
+            <p>zhangsan</p>
+            <p>zhangsan</p> 
+        </div>
+        <div id="bottom_div">
+            <p>加载中，请稍后....</p>
+        </div>
+    </div>
+
+    <div id="data">
+        <p>什么了看</p>
+        <p>v模式</p>
+        <p>v模式</p>
+        <p>什么了看到</p>
+        <p>什么了看到爸妈模式</p>
+        <p>是v模式</p>
+        <p>是v模式</p>
+        <p>是v模式</p>
+        <p>什么了看到爸是v模式</p>
+        <p>什么了都是v模式</p>
+    </div>
+    <script>
+        var obj;
+        var bottom_obj;
+        var inner_obj;
+        var data;
+
+        window.onload = function () {
+            obj = document.getElementById("out_div");
+            bottom_obj = document.getElementById("bottom_div");
+            inner_obj = document.getElementById("inner_div");
+            data = document.getElementById("data");
+
+            obj.onscroll = function () {
+                var x = obj.scrollTop;
+                var y = obj.scrollHeight;
+                var z = obj.clientHeight;
+
+                if (x == y - z) {
+                    bottom_obj.style.display = "block";
+                    window.setTimeout("addData()", 1000);
+                }
+            }
+        }
+        //添加data进下拉框里
+        //定义一个字符串为str=里面的obj的innerHTML+信息的innerHTML
+        //再将str赋值给inner_obj
+        //将下拉刷新的样式设为隐藏。
+        function addData() {
+            var str = inner_obj.innerHTML + data.innerHTML;
+            inner_obj.innerHTML = str;
+            bottom_obj.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
