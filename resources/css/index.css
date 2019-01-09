@@ -481,15 +481,17 @@ a {
 .img_para {
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 320px;
     background-color: #fff;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #777;
 }
 
 .img_para_title {
     text-indent: 2em;
     position: relative;
     width: 100%;
-    height: 10%;
+    height: 100px;
     background-color: #fff;
 }
 
@@ -502,20 +504,12 @@ a {
     left: 0;
 }
 
-.img_inline {
+.img_inline img {
     position: relative;
     display: inline-block;
     width: 22%;
-    height: 70%;
-    top: 0;
-    left: 0;
-    margin: 5% 1.3%;
-}
-
-.img_inline img {
-    position: relative;
-    width: 100%;
-    height: 100%;
+    margin: 0 8px;
+    height: 200px;
     left: 0;
 }
 
@@ -540,6 +534,7 @@ a {
     width: 48%;
     float: right;
     word-wrap: break-word;
+    margin-top: 10px;
 }
 
 .img_person_photo {
@@ -603,20 +598,19 @@ a {
 /* 下拉刷新展示 */
 
 .page_bottom {
-    /* float: left; */
     position: absolute;
-    margin-top: 20px;
     bottom: 0;
     color: #333;
     width: 100%;
-    padding-top: 15px;
+    padding-top: 10px;
     height: 50px;
     background-color: #fff;
     text-align: center;
 }
 
 /* 网站介绍部分 */
-.describe{
+
+.describe {
     position: relative;
     display: inline-block;
     margin-top: 20px;
@@ -626,53 +620,71 @@ a {
     color: #444;
 }
 
-.tel{
+.record {
+    /* border: 1px solid #000; */
     position: absolute;
-    left: 22%;
+    left: 10px;
     display: inline-block;
-    width: 30%;
+    width: 22%;
     height: 80%;
 }
 
-.tel p{
+.tel {
+    /* border: 1px solid #000; */
+    position: absolute;
+    left: 24%;
+    display: inline-block;
+    width: 25%;
+}
+
+.tel p {
     line-height: 200%;
 }
 
-.ewm{
+.record li {
+    list-style: none;
+    text-decoration: none;
+    line-height: 200%;
+}
+
+.ewm {
+    /* border: 1px solid #000; */
+    margin-right: 10%;
     position: absolute;
-    left: 30%;
+    left: 50%;
     display: inline-block;
-    width: 40%;
-    height: 80%;
+    width: 25%;
+    height: 70%;
 }
 
-.ewm img{
-    position: relative;
+.ewm img {
+    position: absolute;
     display: inline-block;
-    width: 40%;
-    height: 80%;
-    margin-left: 30%;
+    width: 100%;
+    height:100%;
+    margin-top: 5%;
 }
 
-.ewm p{
+.ewm p {
     text-align: center;
 }
 
-.help{
+.help {
+    /* border: 1px solid #000; */
     position: relative;
-    left: 63%;
-    width: 30%;
+    left: 72%;
+    margin-left: 10%;
+    width: 25%;
     height: 80%;
 }
 
-.help ul{
+.help ul {
     width: 100%;
 }
 
-.help li{
-    list-style:none;
+.help li {
+    list-style: none;
     line-height: 200%;
 }
-
 
 /* --------------------- */
