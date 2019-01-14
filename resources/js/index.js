@@ -138,8 +138,32 @@ function addNews() {
     article[0].innerHTML = news;
     pageBottom[0].css('display', 'none');
 }
+// ---------------------------------------------------
+// ajax部分
+function getXMLHttpRequest() {
+    var xhr = false;
+    if (window.XMLHttpRequest) {
+        xhr = new XMLHttpRequest();
+    } else if (window.ActiveXObject) {
+        xhr = new ActiveXObject('Microsoft.XMLHTTP')
+    }
+    return xhr;
+}
+window.onload = function () {
+    // alert(getXMLHttpRequest());
+    var page_title=$('#njsf_edu');
+    page_title.onclick=function(){
+        var xhr = getXMLHttpRequest();
 
+        xhr.open('get','../location.json');
 
+        xhr.send();
+
+        xhr.onreadystatechang=function(){
+            
+        }
+    }
+};
 
 // ---------------------------------------------------
 
