@@ -160,7 +160,11 @@ window.onload = function () {
         xhr.send();
 
         xhr.onreadystatechang=function(){
-            
+            if(xhr.readyStatus==4){
+                if(xhr.status==200){
+                    
+                }
+            }
         }
     }
 };
