@@ -140,34 +140,58 @@ function addNews() {
 }
 // ---------------------------------------------------
 // ajax部分
-function getXMLHttpRequest() {
-    var xhr = false;
-    if (window.XMLHttpRequest) {
-        xhr = new XMLHttpRequest();
-    } else if (window.ActiveXObject) {
-        xhr = new ActiveXObject('Microsoft.XMLHTTP')
-    }
-    return xhr;
-}
-window.onload = function () {
-    // alert(getXMLHttpRequest());
-    var page_title=$('#njsf_edu');
-    page_title.onclick=function(){
-        var xhr = getXMLHttpRequest();
 
-        xhr.open('get','../location.json');
-
-        xhr.send();
-
-        xhr.onreadystatechang=function(){
-            if(xhr.readyStatus==4){
-                if(xhr.status==200){
-                    
-                }
+$(function () {
+    $('#njsf_edu').click(function () {
+        $.ajax({
+            type: "GET",
+            url: "test.json",
+            data: { username: $("#username").val(), content: $("#content").val() },
+            dataType: "json",
+            success: function (data) {
+                $('#resText').empty();   //清空resText里面的所有内容
+                var html = '';
+                $.each(data, function (commentIndex, comment) {
+                    html += '<div class="comment"><h6>' + comment['username']
+                        + ':</h6><p class="para"' + comment['content']
+                        + '</p></div>';
+                });
+                $('#resText').html(html);
             }
-        }
-    }
-};
+        });
+    });
+});
 
-// ---------------------------------------------------
+// function getXMLHttpRequest() {
+//     var xhr = false;
+//     if (window.XMLHttpRequest) {
+//         xhr = new XMLHttpRequest();
+//     } else if (window.ActiveXObject) {
+//         xhr = new ActiveXObject('Microsoft.XMLHTTP')
+//     }
+//     return xhr;
+// }
+// window.onload = function () {
+    // alert(getXMLHttpRequest());
+//     var $pageTitle = $('#njsf_edu');
+//     $pageTitle.click(
+//         function () {
+//             var xhr = getXMLHttpRequest();
 
+//             xhr.open('get', 'location.json');
+
+//             xhr.send();
+
+//             xhr.onreadystatechang = function () {
+//                 if (xhr.readyStatus == 4) {
+//                     if (xhr.status == 200) {
+//                         return xhr.responseText;
+//                     }else{
+//                         return xhr.status;
+//                     }
+//                 }
+//             }
+//         }
+//     )
+// }
+// ---------------------------------------------------新同事 陈玉霞
